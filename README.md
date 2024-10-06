@@ -67,46 +67,75 @@ cmake ..
 make
 
 # 运行应用程序
+
+```
 ./markdown-editor
+```
+
 使用说明
+
 打开文件：
+
 使用左侧的文件列表打开当前目录中的现有 Markdown 文件。
+
 您也可以通过“文件”>“打开文件”从其他目录打开文件。
+
 创建新文件：
+
 前往“文件”>“新建文件”或按 Ctrl+N。
+
 输入所需的文件名（无需扩展名）。
+
 保存文件：
+
 使用“文件”>“保存文件”或按 Ctrl+S 保存您的工作。
+
 使用“文件”>“另存为”将当前文档保存为新名称。
+
 删除文件：
+
 从列表中选择一个文件，然后选择“文件”>“删除文件”或按 Ctrl+D。
+
 插入图片：
+
 将光标放在您希望插入图片的位置。
+
 前往“文件”>“插入图片”或按 Ctrl+I。
+
 选择要插入的图片文件。
+
 更改主题：
+
 从“主题”菜单中选择您喜欢的主题。
+
 调整字体：
+
 选择“文件”>“设置字体”或按 Ctrl+P，更改编辑器的字体和大小。
 
-自定义
-主题
+## 自定义
+
+### 主题
 应用程序支持四种主题：
 
 Light（浅色）
+
 Dark（深色）
+
 Solarized Light（Solarized 浅色）
+
 Solarized Dark（Solarized 深色）
+
 您可以通过修改 MainWindow.cpp 中的 updatePalette 和 applyThemeToAllTabs 函数来添加更多主题。
 
-语法高亮样式
+### 语法高亮样式
+
 语法高亮使用 Highlight.js 的 GitHub 风格。要更改样式：
 
 从 Highlight.js 样式库 下载所需的 CSS 文件。
 
 在 loadMarkdown 函数中更新 highlightCss 变量，使用新的 CSS 文件路径。
 
-项目结构
+## 项目结构
 
 * main.cpp：应用程序的入口点。
 
@@ -120,7 +149,7 @@ Solarized Dark（Solarized 深色）
 
 * screenshots/：存放在 README 中使用的图片。
 
-依赖项
+## 依赖项
 
 Qt：用于 GUI 框架和 Web 引擎组件。
 Highlight.js：用于代码块的语法高亮显示。
