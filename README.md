@@ -1,123 +1,292 @@
-Markdown Editor
-A simple and efficient Markdown editor built with C++ and Qt. This application provides a seamless writing experience with real-time preview, syntax highlighting, and customizable themes.
+# Markdown 编辑器
 
-Features
-Real-time Preview: Automatically updates the preview pane as you type.
-Syntax Highlighting: Supports code block highlighting using Highlight.js.
-Multiple Themes: Choose from Light, Dark, Solarized Light, and Solarized Dark themes.
-File Management:
-Open and edit existing Markdown files.
-Create new files within the application.
-Delete unwanted files easily.
-Tabbed Interface: Work on multiple documents simultaneously with tab support.
-Customizable Editor:
-Change font type and size.
-Set tab width to match your coding style.
-Insert Images: Quickly insert images into your Markdown documents.
-Auto-save: Automatically saves your work every 10 seconds to prevent data loss.
-Split View Adjustments: Resize editor and preview panes with customized splitter handles for better user experience.
-Screenshots
+一个使用 C++ 和 Qt 构建的简洁高效的 Markdown 编辑器。该应用程序提供流畅的写作体验，具有实时预览、语法高亮和可自定义的主题。
 
-An example of the editor with real-time preview and syntax highlighting.
+## 功能特性
 
-Getting Started
-Prerequisites
-Qt Framework: Ensure you have Qt installed (version 5.12 or later recommended).
-C++ Compiler: A C++17 compatible compiler (e.g., GCC, Clang, MSVC).
-Clone the Repository
-bash
-复制代码
+- **实时预览**：在您输入时自动更新预览面板。
+- **语法高亮**：使用 Highlight.js 支持代码块高亮显示。
+- **多种主题**：可选择浅色、深色、Solarized 浅色和 Solarized 深色主题。
+- **文件管理**：
+  - 打开并编辑现有的 Markdown 文件。
+  - 在应用程序中创建新文件。
+  - 轻松删除不需要的文件。
+- **标签式界面**：支持多标签，您可以同时处理多个文档。
+- **可定制的编辑器**：
+  - 更改字体类型和大小。
+  - 设置制表符宽度以匹配您的编码风格。
+- **插入图片**：快速将图片插入到您的 Markdown 文档中。
+- **自动保存**：每隔 10 秒自动保存您的工作，防止数据丢失。
+- **分屏视图调整**：通过自定义的分隔条手柄调整编辑器和预览窗格的大小，提升用户体验。
+
+## 截图
+
+![编辑器和预览](screenshots/editor_preview.png)
+
+*编辑器的示例，具有实时预览和语法高亮功能。*
+
+## 入门指南
+
+### 先决条件
+
+- **Qt 框架**：确保您已安装 Qt（建议版本 5.12 或更高）。
+- **C++ 编译器**：支持 C++17 的编译器（例如 GCC、Clang、MSVC）。
+
+### 克隆仓库
+
+```bash
 git clone https://github.com/yourusername/markdown-editor.git
 cd markdown-editor
-Build Instructions
-Open the Project in Qt Creator:
+```
+构建指南
+在 Qt Creator 中打开项目：
 
-Launch Qt Creator.
-Click on "Open Project" and select the markdown-editor.pro file.
-Configure the Project:
+启动 Qt Creator。
+点击“打开项目”，选择 markdown-editor.pro 文件。
+配置项目：
 
-Choose the appropriate kit for your development environment.
-Ensure that the compiler and Qt version are correctly set.
-Build and Run:
+选择适合您的开发环境的 Kit。
+确保编译器和 Qt 版本设置正确。
+构建并运行：
 
-Click on the "Run" button to build and launch the application.
-Running from the Command Line
+点击“运行”按钮，构建并启动应用程序。
+
+
+
+思考 4 秒
+
+好的，明白您的意思。以下是项目的 README 的原始 Markdown 源代码：
+
+markdown
+复制代码
+# Markdown 编辑器
+
+一个使用 C++ 和 Qt 构建的简洁高效的 Markdown 编辑器。该应用程序提供流畅的写作体验，具有实时预览、语法高亮和可自定义的主题。
+
+## 功能特性
+
+- **实时预览**：在您输入时自动更新预览面板。
+- **语法高亮**：使用 Highlight.js 支持代码块高亮显示。
+- **多种主题**：可选择浅色、深色、Solarized 浅色和 Solarized 深色主题。
+- **文件管理**：
+  - 打开并编辑现有的 Markdown 文件。
+  - 在应用程序中创建新文件。
+  - 轻松删除不需要的文件。
+- **标签式界面**：支持多标签，您可以同时处理多个文档。
+- **可定制的编辑器**：
+  - 更改字体类型和大小。
+  - 设置制表符宽度以匹配您的编码风格。
+- **插入图片**：快速将图片插入到您的 Markdown 文档中。
+- **自动保存**：每隔 10 秒自动保存您的工作，防止数据丢失。
+- **分屏视图调整**：通过自定义的分隔条手柄调整编辑器和预览窗格的大小，提升用户体验。
+
+## 截图
+
+![编辑器和预览](screenshots/editor_preview.png)
+
+*编辑器的示例，具有实时预览和语法高亮功能。*
+
+## 入门指南
+
+### 先决条件
+
+- **Qt 框架**：确保您已安装 Qt（建议版本 5.12 或更高）。
+- **C++ 编译器**：支持 C++17 的编译器（例如 GCC、Clang、MSVC）。
+
+### 克隆仓库
+
+```bash
+git clone https://github.com/yourusername/markdown-editor.git
+cd markdown-editor
+```
+构建指南
+在 Qt Creator 中打开项目：
+
+启动 Qt Creator。
+点击“打开项目”，选择 markdown-editor.pro 文件。
+配置项目：
+
+选择适合您的开发环境的 Kit。
+确保编译器和 Qt 版本设置正确。
+构建并运行：
+
+点击“运行”按钮，构建并启动应用程序。
+命令行运行
 bash
 复制代码
-# Navigate to the project directory
+# 进入项目目录
 cd markdown-editor
 
-# Create a build directory
+# 创建构建目录
 mkdir build && cd build
 
-# Generate Makefiles using qmake
+# 使用 qmake 生成 Makefile
 qmake ..
 
-# Build the project
+# 构建项目
 make
 
-# Run the application
+# 运行应用程序
 ./markdown-editor
-Usage
-Opening Files:
-Use the file list on the left to open existing Markdown files in the current directory.
-You can also open files from other directories using File > Open File.
-Creating New Files:
-Go to File > New File or press Ctrl+N.
-Enter the desired filename (without extension).
-Saving Files:
-Save your work with File > Save File or press Ctrl+S.
-Use File > Save File As to save the current document under a new name.
-Deleting Files:
-Select a file from the list and choose File > Delete File or press Ctrl+D.
-Inserting Images:
-Place the cursor where you want to insert the image.
-Go to File > Insert Image or press Ctrl+I.
-Select an image file to insert.
-Changing Themes:
-Select your preferred theme from the Themes menu.
-Adjusting Font:
-Choose File > Set Font or press Ctrl+P to change the editor's font and size.
-Customization
-Themes
-The application supports four themes:
 
-* Light
-* Dark
-* Solarized Light
-* Solarized Dark
-You can add more themes by modifying the updatePalette and applyThemeToAllTabs functions in MainWindow.cpp.
+使用说明
+打开文件：
+使用左侧的文件列表打开当前目录中的现有 Markdown 文件。
+您也可以通过“文件”>“打开文件”从其他目录打开文件。
+创建新文件：
+前往“文件”>“新建文件”或按 Ctrl+N。
+输入所需的文件名（无需扩展名）。
+保存文件：
+使用“文件”>“保存文件”或按 Ctrl+S 保存您的工作。
+使用“文件”>“另存为”将当前文档保存为新名称。
+删除文件：
+从列表中选择一个文件，然后选择“文件”>“删除文件”或按 Ctrl+D。
+插入图片：
+将光标放在您希望插入图片的位置。
+前往“文件”>“插入图片”或按 Ctrl+I。
+选择要插入的图片文件。
+更改主题：
+从“主题”菜单中选择您喜欢的主题。
+调整字体：
+选择“文件”>“设置字体”或按 Ctrl+P，更改编辑器的字体和大小。
 
-Syntax Highlighting Styles
-The syntax highlighting uses Highlight.js with the GitHub style. To change the style:
 
-Download the desired CSS file from the Highlight.js styles.
-Update the highlightCss variable in the loadMarkdown function with the new CSS file path.
-Project Structure
-main.cpp: Entry point of the application.
-MainWindow.h / MainWindow.cpp: Contains the main window logic, UI setup, and event handling.
-HtmlConverter.hpp: Utility class for converting Markdown to HTML.
-settings.h: Manages application settings like theme, font, and last opened file.
-resources/: Contains images and other resource files.
-screenshots/: Holds images used in the README.
-Dependencies
-Qt: For the GUI framework and web engine components.
-Highlight.js: For syntax highlighting in code blocks.
-cmark: A library for parsing Markdown to HTML.
-Contributing
-Contributions are welcome! Please follow these steps:
 
-Fork the repository.
-Create a new branch: git checkout -b feature/your-feature.
-Commit your changes: git commit -am 'Add some feature'.
-Push to the branch: git push origin feature/your-feature.
-Create a pull request.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+思考 4 秒
 
-Acknowledgments
-Qt Documentation: For comprehensive guides and examples.
-Highlight.js: For providing an easy way to add syntax highlighting.
-cmark: For the Markdown parsing library.
-Contact
-For questions or suggestions, please open an issue or contact your email.
+好的，明白您的意思。以下是项目的 README 的原始 Markdown 源代码：
+
+markdown
+复制代码
+# Markdown 编辑器
+
+一个使用 C++ 和 Qt 构建的简洁高效的 Markdown 编辑器。该应用程序提供流畅的写作体验，具有实时预览、语法高亮和可自定义的主题。
+
+## 功能特性
+
+- **实时预览**：在您输入时自动更新预览面板。
+- **语法高亮**：使用 Highlight.js 支持代码块高亮显示。
+- **多种主题**：可选择浅色、深色、Solarized 浅色和 Solarized 深色主题。
+- **文件管理**：
+  - 打开并编辑现有的 Markdown 文件。
+  - 在应用程序中创建新文件。
+  - 轻松删除不需要的文件。
+- **标签式界面**：支持多标签，您可以同时处理多个文档。
+- **可定制的编辑器**：
+  - 更改字体类型和大小。
+  - 设置制表符宽度以匹配您的编码风格。
+- **插入图片**：快速将图片插入到您的 Markdown 文档中。
+- **自动保存**：每隔 10 秒自动保存您的工作，防止数据丢失。
+- **分屏视图调整**：通过自定义的分隔条手柄调整编辑器和预览窗格的大小，提升用户体验。
+
+## 截图
+
+![编辑器和预览](screenshots/editor_preview.png)
+
+*编辑器的示例，具有实时预览和语法高亮功能。*
+
+## 入门指南
+
+### 先决条件
+
+- **Qt 框架**：确保您已安装 Qt（建议版本 5.12 或更高）。
+- **C++ 编译器**：支持 C++17 的编译器（例如 GCC、Clang、MSVC）。
+
+### 克隆仓库
+
+```bash
+git clone https://github.com/yourusername/markdown-editor.git
+```
+cd markdown-editor
+构建指南
+在 Qt Creator 中打开项目：
+
+启动 Qt Creator。
+点击“打开项目”，选择 markdown-editor.pro 文件。
+配置项目：
+
+选择适合您的开发环境的 Kit。
+确保编译器和 Qt 版本设置正确。
+构建并运行：
+
+点击“运行”按钮，构建并启动应用程序。
+命令行运行
+bash
+复制代码
+# 进入项目目录
+cd markdown-editor
+
+# 创建构建目录
+mkdir build && cd build
+
+# 使用 qmake 生成 Makefile
+qmake ..
+
+# 构建项目
+make
+
+# 运行应用程序
+./markdown-editor
+使用说明
+打开文件：
+使用左侧的文件列表打开当前目录中的现有 Markdown 文件。
+您也可以通过“文件”>“打开文件”从其他目录打开文件。
+创建新文件：
+前往“文件”>“新建文件”或按 Ctrl+N。
+输入所需的文件名（无需扩展名）。
+保存文件：
+使用“文件”>“保存文件”或按 Ctrl+S 保存您的工作。
+使用“文件”>“另存为”将当前文档保存为新名称。
+删除文件：
+从列表中选择一个文件，然后选择“文件”>“删除文件”或按 Ctrl+D。
+插入图片：
+将光标放在您希望插入图片的位置。
+前往“文件”>“插入图片”或按 Ctrl+I。
+选择要插入的图片文件。
+更改主题：
+从“主题”菜单中选择您喜欢的主题。
+调整字体：
+选择“文件”>“设置字体”或按 Ctrl+P，更改编辑器的字体和大小。
+自定义
+主题
+应用程序支持四种主题：
+
+Light（浅色）
+Dark（深色）
+Solarized Light（Solarized 浅色）
+Solarized Dark（Solarized 深色）
+您可以通过修改 MainWindow.cpp 中的 updatePalette 和 applyThemeToAllTabs 函数来添加更多主题。
+
+语法高亮样式
+语法高亮使用 Highlight.js 的 GitHub 风格。要更改样式：
+
+从 Highlight.js 样式库 下载所需的 CSS 文件。
+在 loadMarkdown 函数中更新 highlightCss 变量，使用新的 CSS 文件路径。
+项目结构
+main.cpp：应用程序的入口点。
+MainWindow.h / MainWindow.cpp：包含主窗口的逻辑、UI 设置和事件处理。
+HtmlConverter.hpp：用于将 Markdown 转换为 HTML 的工具类。
+settings.h：管理应用程序设置，如主题、字体和上次打开的文件。
+resources/：包含图片和其他资源文件。
+screenshots/：存放在 README 中使用的图片。
+依赖项
+Qt：用于 GUI 框架和 Web 引擎组件。
+Highlight.js：用于代码块的语法高亮显示。
+cmark：用于 Markdown 解析的库。
+贡献
+欢迎贡献！请按照以下步骤：
+
+Fork 此仓库。
+创建一个新分支：git checkout -b feature/your-feature。
+提交您的更改：git commit -am '添加新功能'。
+推送到分支：git push origin feature/your-feature。
+创建一个 Pull Request。
+许可证
+此项目使用 MIT 许可证。有关详细信息，请参阅 LICENSE 文件。
+
+致谢
+Qt 文档：提供了全面的指南和示例。
+Highlight.js：提供了简单的方法添加语法高亮。
+cmark：用于 Markdown 解析的库。
+联系方式
+QQ:2507560089
