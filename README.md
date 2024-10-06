@@ -21,7 +21,7 @@
 
 ## 截图
 
-![Uploading {880F839F-AB02-4a2c-8618-7640CF172785}.png…]()
+![{C32D3B9E-888D-4292-808C-6DAACE2E1914}](https://github.com/user-attachments/assets/b695897f-43b8-45b4-9dee-186abaac5a50)
 
 
 *编辑器的示例，具有实时预览和语法高亮功能。*
@@ -88,6 +88,7 @@ make
 从“主题”菜单中选择您喜欢的主题。
 调整字体：
 选择“文件”>“设置字体”或按 Ctrl+P，更改编辑器的字体和大小。
+
 自定义
 主题
 应用程序支持四种主题：
@@ -102,23 +103,40 @@ Solarized Dark（Solarized 深色）
 语法高亮使用 Highlight.js 的 GitHub 风格。要更改样式：
 
 从 Highlight.js 样式库 下载所需的 CSS 文件。
+
 在 loadMarkdown 函数中更新 highlightCss 变量，使用新的 CSS 文件路径。
+
 项目结构
-main.cpp：应用程序的入口点。
-MainWindow.h / MainWindow.cpp：包含主窗口的逻辑、UI 设置和事件处理。
-HtmlConverter.hpp：用于将 Markdown 转换为 HTML 的工具类。
-settings.h：管理应用程序设置，如主题、字体和上次打开的文件。
-resources/：包含图片和其他资源文件。
-screenshots/：存放在 README 中使用的图片。
+
+* main.cpp：应用程序的入口点。
+
+* MainWindow.h / MainWindow.cpp：包含主窗口的逻辑、UI 设置和事件处理。
+
+* HtmlConverter.hpp：用于将 Markdown 转换为 HTML 的工具类。
+
+* settings.h：管理应用程序设置，如主题、字体和上次打开的文件。
+
+* resources/：包含图片和其他资源文件。
+
+* screenshots/：存放在 README 中使用的图片。
+
 依赖项
+
 Qt：用于 GUI 框架和 Web 引擎组件。
 Highlight.js：用于代码块的语法高亮显示。
 cmark：用于 Markdown 解析的库。
+
 贡献
+
 欢迎贡献
+
 致谢
 Qt 文档：提供了全面的指南和示例。
+
 Highlight.js：提供了简单的方法添加语法高亮。
+
 cmark：用于 Markdown 解析的库。
-联系方式
+
+联系方式:
+
 QQ:2507560089
