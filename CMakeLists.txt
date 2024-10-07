@@ -15,27 +15,21 @@ find_package(Qt6 COMPONENTS Core Widgets Gui WebEngineWidgets REQUIRED)
 include_directories(include)
 
 # 添加 cmark 的库路径
-set(CMARK_LIB_DIR lib)  # 替换为实际的库路径
+set(CMARK_LIB_DIR lib)
 link_directories(${CMARK_LIB_DIR})
 
 # 找到并链接库
 find_library(CMARK_LIB cmark PATHS ${CMARK_LIB_DIR} REQUIRED)
 
-qt_add_resources(BunnyNote "resources" "res.qrc")
 
 add_executable(BunnyNote WIN32
-        src/main.cpp
         src/main.cpp
         src/mainwindow.h
         src/mainwindow.cpp
         src/settings.cpp
         src/settings.h
         src/HtmlConverter.hpp
-)
-
-set_target_properties(BunnyNote PROPERTIES
-        MACOSX_BUNDLE_ICON_FILE "wyw.ico"  # macOS
-        WIN32_EXECUTABLE TRUE
+        src/res.qrc
 )
 
 

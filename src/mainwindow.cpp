@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(debounceTimer, &QTimer::timeout, this, &MainWindow::refreshPreviews);
 
     // 设置图标
-    QIcon icon("../wyw.ico");
+    QIcon icon(":/wyw.ico");
     setWindowIcon(icon);
 }
 

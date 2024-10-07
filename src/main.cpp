@@ -1,4 +1,5 @@
 #include <QApplication>
+#include <QMainWindow>
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QLabel>
@@ -21,7 +22,7 @@ int main(int argc, char *argv[]) {
 
     // 加载 ICO 图片
     QLabel *logoLabel = new QLabel;
-    QPixmap logoPixmap("../wyw.ico"); //
+    QPixmap logoPixmap(":/wyw.ico");
     logoLabel->setPixmap(logoPixmap.scaledToWidth(100)); // 调整大小以适应布局
     logoLabel->setAlignment(Qt::AlignCenter); // 居中显示
 
