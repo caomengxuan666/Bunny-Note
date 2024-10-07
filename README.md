@@ -1,4 +1,4 @@
-# 基于QWebEngine的现代CPP的Markdown 编辑器
+# Bunny Note 基于QWebEngine的现代CPP的Markdown 编辑器
 
 一个使用 C++ 和 Qt 构建的简洁高效的 Markdown 编辑器。该应用程序提供流畅的写作体验，具有实时预览、语法高亮和可自定义的主题。
 
