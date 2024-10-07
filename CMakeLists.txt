@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.27)
-project(QMarkDownEditor)
+project(BunnyNote)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_AUTOMOC ON)
@@ -21,7 +21,9 @@ link_directories(${CMARK_LIB_DIR})
 # 找到并链接库
 find_library(CMARK_LIB cmark PATHS ${CMARK_LIB_DIR} REQUIRED)
 
-add_executable(QMarkDownEditor WIN32
+qt_add_resources(BunnyNote "resources" "res.qrc")
+
+add_executable(BunnyNote WIN32
         src/main.cpp
         src/main.cpp
         src/mainwindow.h
@@ -31,8 +33,14 @@ add_executable(QMarkDownEditor WIN32
         src/HtmlConverter.hpp
 )
 
+set_target_properties(BunnyNote PROPERTIES
+        MACOSX_BUNDLE_ICON_FILE "wyw.ico"  # macOS
+        WIN32_EXECUTABLE TRUE
+)
+
+
 # 链接 Qt 和 cmark 库
-target_link_libraries(QMarkDownEditor
+target_link_libraries(BunnyNote
         Qt::Core
         Qt::Widgets
         Qt::Gui

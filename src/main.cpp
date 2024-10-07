@@ -1,9 +1,9 @@
 #include <QApplication>
-#include <QMainWindow>
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QProgressBar>
+#include <QPixmap>
 #include <QTimer>
 #include "mainwindow.h"
 
@@ -19,15 +19,22 @@ int main(int argc, char *argv[]) {
 
     QVBoxLayout *layout = new QVBoxLayout(&splashScreen);
 
-    QLabel *loadingLabel = new QLabel("Loading...\nWelcome To use Cmx's MarkDown Editor!");
+    // 加载 ICO 图片
+    QLabel *logoLabel = new QLabel;
+    QPixmap logoPixmap("../wyw.ico"); //
+    logoLabel->setPixmap(logoPixmap.scaledToWidth(100)); // 调整大小以适应布局
+    logoLabel->setAlignment(Qt::AlignCenter); // 居中显示
+
+    QLabel *loadingLabel = new QLabel("Loading...\nWelcome To Bunny Note!");
     QProgressBar *progressBar = new QProgressBar();
     progressBar->setRange(0, 100);
 
+    layout->addWidget(logoLabel); // 添加 ICO 图片标签
     layout->addWidget(loadingLabel);
     layout->addWidget(progressBar);
     splashScreen.setLayout(layout);
 
-    splashScreen.resize(300, 100);
+    splashScreen.resize(300, 150); // 调整窗口大小以容纳图片
     splashScreen.show();
 
     // 创建一个定时器用于更新进度条

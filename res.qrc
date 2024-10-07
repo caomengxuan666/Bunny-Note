@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>wyw.ico</file>
+    </qresource>
+</RCC>
