@@ -48,7 +48,7 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::setupUi() {
-    setWindowTitle("Markdown Editor");
+    setWindowTitle("Bunny Note");
     resize(1600, 1200);// 设置窗口默认大小
 
     // 设置文件列表
