@@ -30,20 +30,20 @@
 
 ### 先决条件
 
-- **Qt 框架**：确保您已安装 Qt（建议版本 5.12 或更高）。
-- **C++ 编译器**：支持 C++17 的编译器（例如 GCC、Clang、MSVC）。
+- **Qt 框架**：确保您已安装 Qt（建议版本 6.2 或更高）。
+- **C++ 编译器**：支持 C++17 的编译器（MSVC）,只有MSVC支持webengine。
 
 ### 克隆仓库
 
 ```bash
-git clone https://github.com/caomengxuan666/WebEngine_QMarkDownEditor_cpp.git
+git clone https://github.com/caomengxuan666/Bunny-Note.git
 ```
-cd markdown-editor
+
 构建指南
+
 在 Qt Creator 中打开项目：
 
 启动 Qt Creator。
-点击“打开项目”，选择 markdown-editor.pro 文件。
 配置项目：
 
 选择适合您的开发环境的 Kit。
@@ -52,24 +52,29 @@ cd markdown-editor
 
 点击“运行”按钮，构建并启动应用程序。
 命令行运行
-bash
-复制代码
+
 # 进入项目目录
-cd markdown-editor
+cd BunnyNote
 
 # 创建构建目录
 mkdir build && cd build
 
 # 使用 cmake 生成 Makefile
+
+```angular2html
 cmake ..
+```
 
 # 构建项目
+
+```angular2html
 make
+```
 
 # 运行应用程序
 
 ```
-./markdown-editor
+./BunnyNote
 ```
 
 使用说明
@@ -155,7 +160,6 @@ Qt：用于 GUI 框架和 Web 引擎组件。
 Highlight.js：用于代码块的语法高亮显示。
 cmark：用于 Markdown 解析的库。
 
-贡献
 
 欢迎贡献
 
