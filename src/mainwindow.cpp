@@ -206,11 +206,15 @@ void MainWindow::setupUi() {
     lastSavedLabel = new QLabel("上次保存: 从未", this);
     statusBar->addWidget(lastSavedLabel);
 }
+
 inline void MainWindow::refreshPreviews() noexcept {
     int currentIndex = fileTabs->currentIndex();
+
     if (currentIndex != -1 && currentIndex < openTabs.size()) {
         FileTab *currentTab = openTabs[currentIndex];
         QString markdown = currentTab->editor->toPlainText();
+        int scrollY = openTabs[currentIndex]->scrollY;
+        std::cout<<scrollY<<std::endl;
         loadMarkdown(markdown, currentTab);
     }
 }
@@ -595,7 +599,14 @@ void MainWindow::onTextChanged() {
     if (currentIndex != -1 && currentIndex < openTabs.size()) {
         FileTab *currentTab = openTabs[currentIndex];
         QString markdown = currentTab->editor->toPlainText();
-        loadMarkdown(markdown, currentTab);// 传递正确的 FileTab*
+        //保存滚动位置
+        auto y=currentTab->preview->page()->scrollPosition().y();
+        //如果y不为0，则滚动到y位置
+        if(y!=0){
+            currentTab->scrollY = currentTab->preview->page()->scrollPosition().y();
+            std::cout << "scrollY: " << currentTab->scrollY << std::endl;
+        }
+        refreshPreviews();
 
         // 更新字数
         int charCount = markdown.length();
@@ -641,6 +652,11 @@ void MainWindow::insertImage() {
     }
 }
 
+
+#include <QTemporaryFile>
+#include <QFile>
+#include <QTextStream>
+#include <QUrl>
 
 inline void MainWindow::loadMarkdown(const QString &markdown, FileTab *tab) noexcept {
     if (!tab || !tab->preview)
@@ -716,9 +732,34 @@ inline void MainWindow::loadMarkdown(const QString &markdown, FileTab *tab) noex
                                    .arg(fontSize)
                                    .arg(html);
 
-    // 设置 HTML 内容
-    tab->preview->setHtml(combinedHtml);
+    // 将 HTML 内容保存到临时文件中
+    QString tempFilePath = QDir::temp().filePath("preview.html");
+    QFile tempFile(tempFilePath);
+    if (tempFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream out(&tempFile);
+        out << combinedHtml;
+        tempFile.close();
+    } else {
+        qDebug() << "Failed to write to temporary HTML file.";
+        return;
+    }
+
+    // 连接 loadFinished 信号，等待页面加载完成后再设置滚动条位置
+    connect(tab->preview, &QWebEngineView::loadFinished, this, [tab](bool success) {
+        if (success) {
+            // 页面加载成功后，恢复滚动条位置
+            tab->preview->page()->runJavaScript(QString("window.scrollTo(0, %1);").arg(tab->scrollY));
+        } else {
+            qDebug() << "Failed to load HTML content in preview.";
+        }
+    });
+
+    // 加载本地 HTML 文件
+    tab->preview->setUrl(QUrl::fromLocalFile(tempFilePath));
 }
+
+
+
 
 
 void MainWindow::onThemeChanged(const QString &theme) {

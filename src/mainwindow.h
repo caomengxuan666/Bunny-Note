@@ -63,6 +63,7 @@ private:
     QString readFile(const QString &filePath);
     void autoSaveFile();
 
+
 private:
     QSplitter *verticalSplitter;
     QListWidget *fileList;
